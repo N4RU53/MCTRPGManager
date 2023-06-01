@@ -1,0 +1,55 @@
+name: "MCTRPGManager"
+version: "1.0.0"
+main: "mc.naru.mctrpgmanager.Main"
+author: "NaruNeko"
+api: "1.19"
+api-version: 1.19
+
+commands:
+  session:
+    description: make start or end session
+    usage: /session [start or end]
+  registchar:
+    descripion: regist the character as yours
+    usage: /registchar [player name] [character name]
+    allow-console: true
+  removechar:
+    descripion: remove the player info from character data
+    usage: /removechar [character name]
+    allow-console: true
+  dice:
+    description: Roll the dice (ex 1d100 => 1-100)
+    usage: /dice [(0-999)(d or D)(0-999)]
+    allow-console: true
+  commanddice:
+    description: Roll the command Dice
+    usage: /commanddice [command tag]
+    allow-console: true
+  secretdice:
+    description: Roll the Secretdice (ex 1d100 => 1-100)
+    usage: /secretdice [(0-999)(d or D)(0-999)]
+    allow-console: true
+  tnpc:
+    description: summon npc
+    usage: /tnpc [mode] [id] *[chardata] *[texture_value] *[texture signature]
+    allow-console: true
+  updatestat:
+    description: update character's stat. KP(op) only.
+    usage: /updatestat [character name] [stat] [command tag or value(0-999)] [value(0-999)]
+    allow-console: true
+  giveskillbook:
+    description: give a book of list of your skills
+    usage: /giveskillbook
+    allow-console: true
+  hp:
+    description: update your char's current hp
+    usage: /hp [value]
+    allow-console: true
+  mp:
+    description: update your char's current mp
+    usage: /mp [value]
+    allow-console: true
+  san:
+    description: check san or update your char's current san
+    usage: /san [if you want - value]
+    allow-console: true
