@@ -9,47 +9,80 @@ commands:
   session:
     description: make start or end session
     usage: /session [start or end]
+    allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   registchar:
     descripion: regist the character as yours
     usage: /registchar [player name] [character name]
     allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   removechar:
     descripion: remove the player info from character data
     usage: /removechar [character name]
     allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   dice:
     description: Roll the dice (ex 1d100 => 1-100)
     usage: /dice [(0-999)(d or D)(0-999)]
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
   commanddice:
     description: Roll the command Dice
     usage: /commanddice [command tag]
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
   secretdice:
     description: Roll the Secretdice (ex 1d100 => 1-100)
     usage: /secretdice [(0-999)(d or D)(0-999)]
     allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   tnpc:
     description: summon npc
     usage: /tnpc [mode] [id] *[chardata] *[texture_value] *[texture signature]
     allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   updatestat:
     description: update character's stat. KP(op) only.
     usage: /updatestat [character name] [stat] [command tag or value(0-999)] [value(0-999)]
     allow-console: true
+    permission: mctrpgmanager.commands.gm
+    permission-message: "Permission Error."
   giveskillbook:
     description: give a book of list of your skills
     usage: /giveskillbook
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
   hp:
     description: update your char's current hp
     usage: /hp [value]
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
   mp:
     description: update your char's current mp
     usage: /mp [value]
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
   san:
     description: check san or update your char's current san
     usage: /san [if you want - value]
     allow-console: true
+    permission: mctrpgmanager.commands.player
+    permission-message: "Permission Error."
+    
+permissions:
+  mctrpgmanager.commands.gm:
+    description: game master permission
+    default: op
+  mctrpgmanager.commands.player:
+    description: player character permission
+    default: true
